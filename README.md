@@ -41,7 +41,13 @@ These files can also be downloaded directly from the [OSF repository](https://os
 
 A description of the extracted features can be found [here](https://osf.io/ud8s5/wiki/Eye-tracking%20features/).
 
+Go-past time sums mapped fixations from the first visit to a word until the first
+fixation on a word to its right, including regressions and returns. It uses the
+existing duration filter and excludes unmapped fixations. If there is no rightward
+exit, the window ends with the trial; unfixated words remain blank. Rerun extraction
+to update previously downloaded feature files.
 
+Run the go-past tests with `python -m unittest test_go_past`.
 
 ## Data validation
 
